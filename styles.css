@@ -11,6 +11,9 @@ body {
 
 .container {
   width: 23rem;
+  margin: 0 auto;
+  display:flex;
+  justify-content:center;
   align-content: center;
 }
 
@@ -18,6 +21,7 @@ kbd {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
+
   width: 3rem;
   height: 9rem;
   text-align: center;
