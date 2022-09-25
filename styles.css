@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: blanchedalmond;
+  background-color: #634e22;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -10,20 +10,48 @@ body {
 }
 
 .container {
-  width: 23rem;
+  width: 21rem;
   margin: 0 auto;
+  position: relative;
+}
+
+.white-keys{
   display:flex;
   justify-content:center;
   align-content: center;
+  position: relative;
+  width: 21rem;
 }
 
-kbd {
+.white-keys kbd {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-
   width: 3rem;
   height: 9rem;
   text-align: center;
-  align-items: center;
+  line-height : 15rem;
+}
+
+.black-keys{
+  display:flex;
+  position: absolute;
+  top: 0rem;
+  left: 2rem;
+}
+
+.black-keys kbd {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  display: inline-block;
+  width: 2rem;
+  height: 6rem;
+  text-align: center;
+  margin-right: 1rem;
+  line-height : 10rem;
+}
+
+#eKey {
+  margin-right: 4rem;
 }

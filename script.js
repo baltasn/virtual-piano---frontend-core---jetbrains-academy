@@ -2,16 +2,18 @@
 
 document.addEventListener("keypress", handleKeyPress);
 
+const whiteKeys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
+const blackKeys = ['W', 'E', 'T', 'Y', 'U'];
+
 function handleKeyPress(e) {
-  const keys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
   const keyPressed = e.key.toUpperCase();
-  if (keys.includes(keyPressed)) {
+  if (whiteKeys.includes(keyPressed) || blackKeys.includes(keyPressed)) {
     createSoundObject(keyPressed).play();
   }
 }
 
 function createSoundObject(keyPressed) {
-  const audio = new Audio(`white_keys/${keyPressed}.mp3`);
+  const audio = new Audio(`keys/${keyPressed}.mp3`);
   return audio;
 }
 
