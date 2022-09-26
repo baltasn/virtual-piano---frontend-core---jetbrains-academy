@@ -1,6 +1,6 @@
 "use strict"
 
-document.addEventListener("keypress", handleKeyPress);
+document.addEventListener("keydown", handleKeyPress);
 document.addEventListener("keyup", handleKeyRelease);
 
 const whiteKeys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
@@ -9,7 +9,9 @@ const blackKeys = ['W', 'E', 'T', 'Y', 'U'];
 function handleKeyPress(e) {
   const keyPressed = e.key.toUpperCase();
   if (whiteKeys.includes(keyPressed) || blackKeys.includes(keyPressed)) {
-    createSoundObject(keyPressed).play();
+    if (e.repeat) return; 
+    const keySound = createSoundObject(keyPressed);
+    keySound.play();
     pressKeyVisual(keyPressed);
   }
 }
